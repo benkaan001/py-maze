@@ -1,0 +1,9 @@
+
+# build system configuration for the project
+[build-system]
+requires = ["setuptools>=64.0.0", "wheel"]
+
+# project-specific metadata
+[project]
+name = "py-maze"
+version = "1.0.0"
