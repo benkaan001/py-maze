@@ -28,15 +28,15 @@ class Maze:
 
     @cached_property
     def height(self):
-        return max(square.row for quare in self) + 1
+        return max(square.row for square in self) + 1
 
     @cached_property
     def entrance(self):
-        return next(square for square in self if square.role is Role.ENTRANCE)
+        return next(sq for sq in self if sq.role is Role.ENTRANCE)
 
     @cached_property
     def exit(self):
-        return next(square for square in self if square.role is Role.EXIT)
+        return next(sq for sq in self if sq.role is Role.EXIT)
 
 def validate_indices(maze: Maze) -> None:
     assert [square.index for square in maze] == list(
@@ -57,5 +57,5 @@ def validate_entrance(maze: Maze) -> None:
 
 def validate_exit(maze: Maze) -> None:
     assert 1 == sum(
-        1 for square in maze if square.Role is Role.EXIT
+        1 for square in maze if square.role is Role.EXIT
     ), "Must be exactly one exit"
