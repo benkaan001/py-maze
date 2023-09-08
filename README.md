@@ -1,1 +1,1 @@
-# py-maze
+# python-cookbook-in-a-notebook
